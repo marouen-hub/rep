@@ -39,31 +39,10 @@ $(PROG): $(OBJS)
 
   
 
-  # Règle pour main.o
+%.o: %.c
 
-main.o: main.c cpu.h ram.h
-
-	$(CC) $(CFLAGS) -c main.c
-
-  
-
-  # Règle pour cpu.o .
-
-cpu.o: cpu.c cpu.h
-
-	$(CC) $(CFLAGS) -c cpu.c
-
-  
-
-  # Règle pour ram.o.
-
-ram.o: ram.c ram.h
-
-	$(CC) $(CFLAGS) -c ram.c
-
-  
-
-  # Nettoyage.
+	$(CC) $(CFLAGS) -c $<
+# Nettoyage.
 
 clean:
 
