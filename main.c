@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "cpu.h"
-#include "ram.h"
+#include "modules.h"
+
 int main()
 { 
 while(1)
@@ -34,6 +34,8 @@ collecte(&Mem) ;
 	printf("cached = %s\n", Mem.cached);
 
 sleep(3);
+
+
 }
 
 return 0;

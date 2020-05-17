@@ -17,7 +17,7 @@ RM = /bin/rm -f
 
   # La liste des fichiers objet à générer.
 
-OBJS = main.o cpu.o ram.o
+OBJS = main.o modules.o
 
   # Le nom de l'exécutable.
 
