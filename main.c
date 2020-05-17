@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "cpu.h"
 #include "ram.h"
 int main()
 { 
+while(1)
+{
 printf("**********Cpu*****************\n");
 cpu cpu;
 collecte_donnees(&cpu);	
@@ -29,6 +32,9 @@ collecte(&Mem) ;
 	printf("mem_free = %s\n", Mem.mem_free);
 	printf("buffers = %s\n", Mem.buffers);
 	printf("cached = %s\n", Mem.cached);
+
+sleep(3);
+}
 
 return 0;
 }
