@@ -134,7 +134,7 @@ collecte(&Mem) ;
 		statStuff s ;
 		readStat(PIDN ,&s);
 		printf("\n\n\n\n**********DATA  per process*****************  PID = %d\n\n\n\n\n", s.pid);			
-		printf("\n\n\n\n	         **Cpu of the current process, PID =  ** %d\n\n\n\n\n", s.pid);			
+		printf("\n\n\n\n	         **Cpu of the current process, PID =   %d\n\n\n\n\n", s.pid);			
 
 		    printf("pid = %d\n", s.pid); 
 		    printf("comm = %s\n", s.comm); 
@@ -182,7 +182,7 @@ collecte(&Mem) ;
 
 statmStuff stuff ;
 readStatm(PIDN, &stuff);
-printf("\n\n\n\n                    ** memory of the current process, PID  = ** %d\n\n\n\n\n", s.pid);
+printf("\n\n\n\n                    ** memory of the current process, PID  = %d\n\n\n\n\n", s.pid);
 printf("pid = %d\n", s.pid); 
 printf("size = %lu\n", stuff.size); 
 printf("resident = %lu\n", stuff.resident); 
