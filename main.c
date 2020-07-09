@@ -17,7 +17,7 @@ int main()
 { 
 while(1)
 {
-printf("**********Ip*****************\n");
+printf("\n\n\n\n**********Ip*****************\n\n\n\n\n");
 
 int n;
     struct ifreq ifr;
@@ -38,7 +38,7 @@ int n;
 
 
 
-printf("**********MAC*****************\n");
+printf("\n\n\n\n**********MAC*****************\n\n\n\n\n");
 
     struct ifconf ifc;
     char buf[1024];
@@ -81,7 +81,7 @@ printf("**********MAC*****************\n");
 
 
 
-printf("**********Cpu*****************\n");
+printf("\n\n\n\n**********Total Cpu*****************\n\n\n\n\n");
 cpu cpu;
 collecte_donnees(&cpu);	
 
@@ -96,7 +96,7 @@ printf("cpu_steal_time = \n");
 printf("cpu_guest_system =\n") ; 
 
 
-printf("**********Memory*****************\n");
+printf("\n\n\n\n**********Total Memory*****************\n\n\n\n\n");
 
 mem Mem;
 collecte(&Mem) ; 
@@ -107,7 +107,7 @@ collecte(&Mem) ;
 	printf("buffers = %s\n", Mem.buffers);
 	printf("cached = %s\n", Mem.cached);
 
- printf("**********cpu per process*****************\n");
+
  DIR *dir;
  int PIDN;
  struct dirent *ent;
@@ -123,8 +123,9 @@ collecte(&Mem) ;
 
             if(strspn(ent->d_name, l)) 
             {   
-		printf("***************************\n");
-                printf(" %s\n", ent->d_name);
+
+
+                //printf(" %s\n", ent->d_name);
 		PIDN= atoi(ent->d_name);
 
 
@@ -132,6 +133,9 @@ collecte(&Mem) ;
 
 		statStuff s ;
 		readStat(PIDN ,&s);
+		printf("\n\n\n\n**********DATA  per process*****************  PID = %d\n\n\n\n\n", s.pid);			
+		printf("\n\n\n\n	         **Cpu of the current process =  ** %d\n\n\n\n\n", s.pid);			
+
 		    printf("pid = %d\n", s.pid); 
 		    printf("comm = %s\n", s.comm); 
 		    printf("state = %c\n", s.state); 
@@ -178,7 +182,8 @@ collecte(&Mem) ;
 
 statmStuff stuff ;
 readStatm(PIDN, &stuff);
-
+printf("\n\n\n\n                    ** memory of the current process = ** %d\n\n\n\n\n", s.pid);
+printf("pid = %d\n", s.pid); 
 printf("size = %lu\n", stuff.size); 
 printf("resident = %lu\n", stuff.resident); 
 printf("share = %lu\n", stuff.share); 
@@ -195,11 +200,9 @@ printf("dt = %lu\n", stuff.dt);
 
 
 
-sleep(3);
+sleep(3000);
 }
 
 return 0;
 
 }
-	
-
