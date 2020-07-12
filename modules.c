@@ -9,17 +9,26 @@
 void collecte_donnees (cpu* cpu)
 { 
 	    FILE *fp;
-	char cputag[5];
+
 
 
         fp = fopen("/proc/stat","r");
-	fscanf(fp,"%s %s %s %s %s %s %s %s\n",cputag, cpu->cpu_user, cpu->cpu_nice, cpu->cpu_system, cpu->cpu_idle, cpu->cpu_iowait, cpu->cpu_irq, cpu->cpu_softirq);
+	fscanf(fp, "%*s %s %s %s %s %s %s %s %s %s",
+                        cpu->user,
+                        cpu->nice,
+                        cpu->system,
+                        cpu->idle,
+                        cpu->iowait,
+                        cpu->irq,
+                        cpu->softirq,
+                        cpu->steal_time,
+                        cpu->guest_system);
 	fclose(fp);
 
 }
 
 
-void collecte (mem* Mem)
+void collecte (mem* mem)
 { 
 	    int i=0;
 
@@ -30,20 +39,20 @@ void collecte (mem* Mem)
 			switch (i)
 			{
 			case 1:
-fscanf(fm,"  %s  \n",Mem->mem_total)     ;			
+fscanf(fm,"  %lu \n",&mem->MemTotal)     ;			
 	break;
 			
 			case 2:
-fscanf(fm,"  %s  \n",Mem->mem_available) ;			
+fscanf(fm,"  %lu  \n",&mem->MemFree) ;			
 	break;
 			case 3:
-fscanf(fm,"  %s \n",Mem->mem_free)		;	
+fscanf(fm,"  %lu \n",&mem->MemAvailable)		;	
 	break;
 			case 4:
-fscanf(fm," %s\n",Mem->buffers)		;	
+fscanf(fm," %lu\n",&mem->Buffers)		;	
 	break;
 			case 5:
-fscanf(fm,"  %s  \n",Mem->cached)		;
+fscanf(fm,"  %lu  \n",&mem->Cached)		;
 		break;
 
 			default:
@@ -151,4 +160,9 @@ const char *format = "%d %s %c %d %d %d %d %d %lu %lu %lu %lu %lu %lu %lu %ld %l
 	return 0; 
      } 
 } 
+
+
+
+
+
 

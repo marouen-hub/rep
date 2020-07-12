@@ -85,48 +85,68 @@ printf("\n\n\n\n**********Total Cpu*****************\n\n\n\n\n");
 cpu cpu;
 collecte_donnees(&cpu);	
 
-printf("cpu_user = %s\n", cpu.cpu_user );
-printf("cpu_nice = %s\n", cpu.cpu_nice );
-printf("cpu_system = %s\n", cpu.cpu_system );
-printf("cpu_idle = %s\n", cpu.cpu_idle);
-printf("cpu_iowait = %s\n", cpu.cpu_iowait);
-printf("cpu_irq = %s\n", cpu.cpu_irq);
-printf("cpu_softirq = %s\n", cpu.cpu_softirq);
-printf("cpu_steal_time = \n");
-printf("cpu_guest_system =\n") ; 
+printf("cpu_user = %s\n", cpu.user );
+printf("cpu_nice = %s\n", cpu.nice );
+printf("cpu_system = %s\n", cpu.system );
+printf("cpu_idle = %s\n", cpu.idle);
+printf("cpu_iowait = %s\n", cpu.iowait);
+printf("cpu_irq = %s\n", cpu.irq);
+printf("cpu_softirq = %s\n", cpu.softirq);
+printf("cpu_steal_time = %s \n",cpu.steal_time);
+printf("cpu_guest_system = %s\n",cpu.guest_system) ; 
+
 
 
 printf("\n\n\n\n**********Total Memory*****************\n\n\n\n\n");
 
-mem Mem;
-collecte(&Mem) ; 
+mem mem;
+collecte(&mem) ; 
 	
-	printf("mem_total = %s\n", Mem.mem_total );
-	printf("mem_available = %s\n", Mem.mem_available);
-	printf("mem_free = %s\n", Mem.mem_free);
-	printf("buffers = %s\n", Mem.buffers);
-	printf("cached = %s\n", Mem.cached);
+	printf("mem_total = %lu\n", mem.MemTotal );
+	printf("mem_available = %lu\n", mem.MemFree);
+	printf("mem_free = %lu\n", mem.MemAvailable);
+	printf("buffers = %lu\n", mem.Buffers);
+	printf("cached = %lu\n", mem.Cached);
 
 
  DIR *dir;
+ int *pids = malloc(sizeof(int) * 10);
+ char buffer[100];
  int PIDN;
  struct dirent *ent;
  const char l[]="0123456789";
 
- if ((dir = opendir("/proc")) == NULL)
+ const char cmd[] = "ps -eo pid --sort=-%cpu --no-header | head";
+
+ FILE *fp = popen(cmd, "r");
+ if (fp != NULL)
+    {
+    if ((dir = opendir("/proc")) == NULL)
         perror("operation error");
- else 
- {
-        printf(" PID      \n");
+    else 
+    {
 
-        while ((ent = readdir(dir)) != NULL)
 
-            if(strspn(ent->d_name, l)) 
-            {   
+        for (int i = 0; fgets(buffer, sizeof buffer, fp); i++)
+            {sscanf(buffer, "%d", &pids[i]);
+	    printf("%d \n",pids[i]);
+	    	
+
+      
+       
+   
+
+
+
+
+        
+
+        
+		
 
 
                 //printf(" %s\n", ent->d_name);
-		PIDN= atoi(ent->d_name);
+		PIDN= pids[i];
 
 
 
@@ -194,12 +214,13 @@ printf("dt = %lu\n", stuff.dt);
 
 
             }
-
+      
         closedir(dir);
  }
+  pclose(fp);
 
 
-
+ }
 sleep(3000);
 }
 

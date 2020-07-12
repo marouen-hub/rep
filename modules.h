@@ -1,26 +1,27 @@
-typedef struct cpu cpu ;
+struct cpu
+{
+    char user[50];
+    char nice[50];
+    char system[50];
+    char idle[50];
+    char iowait[50];
+    char irq[50];
+    char softirq[50];
+    char steal_time[50];
+    char guest_system[50];
+};
 
-struct cpu {
-	char cpu_user[50];
-	char cpu_nice[50];
-	char cpu_system[50];
-	char cpu_idle[50];
-	char cpu_iowait[50];
-	char cpu_irq[50];
-	char cpu_softirq[50];
-	char cpu_steal_time[50];
-	char cpu_guest_system[50];
-		} ;
+typedef struct cpu cpu;
 extern void collecte_donnees (cpu* cpu);
 
 typedef struct mem mem ;
 
 struct mem {
-	char mem_total [50];
-	char mem_available[50];
-	char mem_free[50];
-	char buffers[50];
-	char cached[50];
+	unsigned long MemTotal ;
+	unsigned long MemFree;
+	unsigned long MemAvailable;
+	unsigned long Buffers;
+	unsigned long Cached;
 		} ;
 extern void collecte (mem* Mem);
 
@@ -87,4 +88,6 @@ struct statmStuff {
 } ; 
 
 extern int readStatm(int pid,statmStuff *s);
+
+
 
