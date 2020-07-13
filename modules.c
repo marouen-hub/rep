@@ -6,32 +6,38 @@
 
 
 
-void collecte_donnees (cpu* cpu)
+void collecte_donnees_cpu (cpu* Cpu)
 { 
 	    FILE *fp;
-
-
+		
+	char cputag[5];
+unsigned int i=0;
 
         fp = fopen("/proc/stat","r");
-	fscanf(fp, "%*s %s %s %s %s %s %s %s %s %s",
-                        cpu->user,
-                        cpu->nice,
-                        cpu->system,
-                        cpu->idle,
-                        cpu->iowait,
-                        cpu->irq,
-                        cpu->softirq,
-                        cpu->steal_time,
-                        cpu->guest_system);
+	fscanf(fp,"%s %s %s %s %s %s %s %s\n",cputag, Cpu->cpu_user, Cpu->cpu_nice, Cpu->cpu_system, Cpu->cpu_idle, Cpu->cpu_iowait, Cpu->cpu_irq, Cpu->cpu_softirq);
 	fclose(fp);
+				
+
+
+printf("cpu_user = %s\n", Cpu->cpu_user );
+printf("cpu_nice = %s\n", Cpu->cpu_nice );
+printf("cpu_system = %s\n", Cpu->cpu_system );
+printf("cpu_idle = %s\n", Cpu->cpu_idle);
+printf("cpu_iowait = %s\n", Cpu->cpu_iowait);
+printf("cpu_irq = %s\n", Cpu->cpu_irq);
+printf("cpu_softirq = %s\n", Cpu->cpu_softirq);
+printf("cpu_steal_time = \n");
+printf("cpu_guest_system =\n") ;
+
 
 }
 
 
-void collecte (mem* mem)
-{ 
-	    int i=0;
 
+void collecte_donnees_ram (mem* Mem)
+{ 
+	    unsigned int i=0;
+char title[20];char value[30];char unit[5];
 
      FILE *fm;
    fm = fopen("/proc/meminfo","r");
@@ -39,20 +45,20 @@ void collecte (mem* mem)
 			switch (i)
 			{
 			case 1:
-fscanf(fm,"  %lu \n",&mem->MemTotal)     ;			
+fscanf(fm," %s %s %s \n",title,Mem->mem_total,unit)     ;			
 	break;
 			
 			case 2:
-fscanf(fm,"  %lu  \n",&mem->MemFree) ;			
+fscanf(fm," %s %s %s \n",title,Mem->mem_available,unit) ;			
 	break;
 			case 3:
-fscanf(fm,"  %lu \n",&mem->MemAvailable)		;	
+fscanf(fm," %s %s %s \n",title,Mem->mem_free,unit)		;	
 	break;
 			case 4:
-fscanf(fm," %lu\n",&mem->Buffers)		;	
+fscanf(fm," %s %s %s \n",title,Mem->buffers,unit)		;	
 	break;
 			case 5:
-fscanf(fm,"  %lu  \n",&mem->Cached)		;
+fscanf(fm," %s %s %s \n",title,Mem->cached,unit)		;
 		break;
 
 			default:
@@ -60,9 +66,17 @@ fscanf(fm,"  %lu  \n",&mem->Cached)		;
 			}
 	i++;
 		}
+	printf("mem_total = %s\n", Mem->mem_total );
+	printf("mem_available = %s\n", Mem->mem_available);
+	printf("mem_free = %s\n", Mem->mem_free);
+	printf("buffers = %s\n", Mem->buffers);
+	printf("cached = %s\n", Mem->cached);
+	printf("-------------\n");
+
 		fclose(fm);
 
 }
+
 
 
 
