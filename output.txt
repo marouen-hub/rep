@@ -1,8 +1,4 @@
-
-
-
-
-**********Ip*****************
+*********Ip*****************
 
 
 
@@ -17,7 +13,7 @@ IP Address is eth0 - 0.0.0.0
 
 
 
-Mac: 3C:A0:67:18:25:0F
+Mac: 40:F0:2F:99:86:73
 
 
 
@@ -27,15 +23,15 @@ Mac: 3C:A0:67:18:25:0F
 
 
 
-cpu_user = 386760
-cpu_nice = 13104
-cpu_system = 98268
-cpu_idle = 12009025
-cpu_iowait = 136185
+cpu_user = 125915
+cpu_nice = 3864
+cpu_system = 22063
+cpu_idle = 1027771
+cpu_iowait = 56936
 cpu_irq = 0
-cpu_softirq = 24186
-cpu_steal_time = 0 
-cpu_guest_system = 0
+cpu_softirq = 1121
+cpu_steal_time = 
+cpu_guest_system =
 
 
 
@@ -45,17 +41,18 @@ cpu_guest_system = 0
 
 
 
-mem_total = 4294967343
-mem_available = 10
-mem_free = 0
-buffers = 139831144874344
-cached = 140725211678608
-26004 
+mem_total = 5993208
+mem_available = 1872832
+mem_free = 3474764
+buffers = 287356
+cached = 1985000
+-------------
+6372 
 
 
 
 
-**********DATA  per process*****************  PID = 26004
+**********DATA  per process*****************  PID = 6372
 
 
 
@@ -64,39 +61,39 @@ cached = 140725211678608
 
 
 
-	         **Cpu of the current process, PID =   26004
+	         **Cpu of the current process, PID =   6372
 
 
 
 
-pid = 26004
+pid = 6372
 comm = (chrome)
 state = S
-ppid = 22795
-pgrp = 2336
-session = 2336
+ppid = 2356
+pgrp = 2155
+session = 2155
 tty_nr = 0
 tpgid = -1
 flags = 1077936192
-minflt = 100431
+minflt = 400859
 cminflt = 0
-majflt = 0
+majflt = 1
 cmajflt = 0
-utime = 2116
-stime = 321
+utime = 8755
+stime = 836
 cutime = 0
 cstime = 0
 priority = 20
 nice = 0
-num_threads = 14
+num_threads = 15
 itrealvalue = 0
-starttime = 3147807
-vsize = 967561216
-rss = 32982
+starttime = 253285
+vsize = 9441861632
+rss = 69821
 rlim = 18446744073709551615
-startcode = 94054803038208
-endcode = 94054940101456
-startstack = 140727050946192
+startcode = 94309887967232
+endcode = 94310041837920
+startstack = 140729223271040
 kstkesp = 0
 kstkeip = 0
 signal = 0
@@ -110,30 +107,264 @@ exit_signal = 17
 processor = 2
 rt_priority = 0
 policy = 0
+delayacct_blkio_ticks = 9
+
+
+
+
+                    ** memory of the current process, PID  = 6372
+
+
+
+
+pid = 6372
+size = 2305142
+resident = 69821
+share = 43819
+text = 37567
+lib = 0
+data = 70957
+dt = 0
+3797 
+
+
+
+
+**********DATA  per process*****************  PID = 3797
+
+
+
+
+
+
+
+
+	         **Cpu of the current process, PID =   3797
+
+
+
+
+pid = 3797
+comm = (chrome)
+state = S
+ppid = 2356
+pgrp = 2155
+session = 2155
+tty_nr = 0
+tpgid = -1
+flags = 1077936192
+minflt = 1336228
+cminflt = 0
+majflt = 25
+cmajflt = 0
+utime = 17374
+stime = 893
+cutime = 0
+cstime = 0
+priority = 20
+nice = 0
+num_threads = 14
+itrealvalue = 0
+starttime = 42394
+vsize = 5296484352
+rss = 88453
+rlim = 18446744073709551615
+startcode = 94309887967232
+endcode = 94310041837920
+startstack = 140729223271040
+kstkesp = 0
+kstkeip = 0
+signal = 0
+blocked = 0
+sigignore = 4098
+sigcatch = 1073827581
+wchan = 0
+nswap = 0
+cnswap = 0
+exit_signal = 17
+processor = 2
+rt_priority = 0
+policy = 0
+delayacct_blkio_ticks = 140
+
+
+
+
+                    ** memory of the current process, PID  = 3797
+
+
+
+
+pid = 3797
+size = 1293087
+resident = 88453
+share = 30530
+text = 37567
+lib = 0
+data = 157721
+dt = 0
+2453 
+
+
+
+
+**********DATA  per process*****************  PID = 2453
+
+
+
+
+
+
+
+
+	         **Cpu of the current process, PID =   2453
+
+
+
+
+pid = 2453
+comm = (chrome)
+state = S
+ppid = 2356
+pgrp = 2155
+session = 2155
+tty_nr = 0
+tpgid = -1
+flags = 1077936192
+minflt = 695437
+cminflt = 0
+majflt = 136
+cmajflt = 0
+utime = 18341
+stime = 773
+cutime = 0
+cstime = 0
+priority = 20
+nice = 0
+num_threads = 13
+itrealvalue = 0
+starttime = 9553
+vsize = 5344133120
+rss = 123799
+rlim = 18446744073709551615
+startcode = 94309887967232
+endcode = 94310041837920
+startstack = 140729223271040
+kstkesp = 0
+kstkeip = 0
+signal = 0
+blocked = 0
+sigignore = 4098
+sigcatch = 1073827581
+wchan = 0
+nswap = 0
+cnswap = 0
+exit_signal = 17
+processor = 0
+rt_priority = 0
+policy = 0
+delayacct_blkio_ticks = 1421
+
+
+
+
+                    ** memory of the current process, PID  = 2453
+
+
+
+
+pid = 2453
+size = 1304720
+resident = 123799
+share = 63779
+text = 37567
+lib = 0
+data = 114820
+dt = 0
+6653 
+
+
+
+
+**********DATA  per process*****************  PID = 6653
+
+
+
+
+
+
+
+
+	         **Cpu of the current process, PID =   6653
+
+
+
+
+pid = 6653
+comm = (gnome-terminal-)
+state = R
+ppid = 1720
+pgrp = 1798
+session = 1798
+tty_nr = 0
+tpgid = -1
+flags = 4194304
+minflt = 3187
+cminflt = 0
+majflt = 0
+cmajflt = 0
+utime = 13
+stime = 5
+cutime = 0
+cstime = 0
+priority = 20
+nice = 0
+num_threads = 5
+itrealvalue = 0
+starttime = 311312
+vsize = 683925504
+rss = 9173
+rlim = 18446744073709551615
+startcode = 4194304
+endcode = 4490748
+startstack = 140723533730240
+kstkesp = 0
+kstkeip = 0
+signal = 0
+blocked = 0
+sigignore = 4096
+sigcatch = 65536
+wchan = 0
+nswap = 0
+cnswap = 0
+exit_signal = 17
+processor = 1
+rt_priority = 0
+policy = 0
 delayacct_blkio_ticks = 0
 
 
 
 
-                    ** memory of the current process, PID  = 26004
+                    ** memory of the current process, PID  = 6653
 
 
 
 
-pid = 26004
-size = 236221
-resident = 32982
-share = 20498
-text = 33463
+pid = 6653
+size = 166974
+resident = 9173
+share = 7470
+text = 73
 lib = 0
-data = 50011
+data = 12074
 dt = 0
-22782 
+2324 
 
 
 
 
-**********DATA  per process*****************  PID = 22782
+**********DATA  per process*****************  PID = 2324
 
 
 
@@ -142,39 +373,39 @@ dt = 0
 
 
 
-	         **Cpu of the current process, PID =   22782
+	         **Cpu of the current process, PID =   2324
 
 
 
 
-pid = 22782
+pid = 2324
 comm = (chrome)
 state = S
-ppid = 1936
-pgrp = 2336
-session = 2336
+ppid = 1720
+pgrp = 2155
+session = 2155
 tty_nr = 0
 tpgid = -1
 flags = 4194560
-minflt = 578106
-cminflt = 8699
-majflt = 7
-cmajflt = 0
-utime = 15436
-stime = 4801
-cutime = 9
-cstime = 3
+minflt = 896855
+cminflt = 28865
+majflt = 724
+cmajflt = 1
+utime = 12300
+stime = 2952
+cutime = 25
+cstime = 13
 priority = 20
 nice = 0
-num_threads = 28
+num_threads = 32
 itrealvalue = 0
-starttime = 2638739
-vsize = 1191149568
-rss = 54896
+starttime = 7508
+vsize = 1385947136
+rss = 70103
 rlim = 18446744073709551615
-startcode = 94277763244032
-endcode = 94277900307280
-startstack = 140735110833888
+startcode = 94199745675264
+endcode = 94199899545952
+startstack = 140733692470752
 kstkesp = 0
 kstkeip = 0
 signal = 0
@@ -185,33 +416,33 @@ wchan = 0
 nswap = 0
 cnswap = 0
 exit_signal = 17
-processor = 1
+processor = 0
 rt_priority = 0
 policy = 0
-delayacct_blkio_ticks = 7
+delayacct_blkio_ticks = 2385
 
 
 
 
-                    ** memory of the current process, PID  = 22782
+                    ** memory of the current process, PID  = 2324
 
 
 
 
-pid = 22782
-size = 290808
-resident = 54896
-share = 32611
-text = 33463
+pid = 2324
+size = 338366
+resident = 70103
+share = 36226
+text = 37567
 lib = 0
-data = 92083
+data = 129516
 dt = 0
-1037 
+969 
 
 
 
 
-**********DATA  per process*****************  PID = 1037
+**********DATA  per process*****************  PID = 969
 
 
 
@@ -220,35 +451,35 @@ dt = 0
 
 
 
-	         **Cpu of the current process, PID =   1037
+	         **Cpu of the current process, PID =   969
 
 
 
 
-pid = 1037
+pid = 969
 comm = (Xorg)
 state = S
-ppid = 1024
-pgrp = 1037
-session = 1037
+ppid = 956
+pgrp = 969
+session = 969
 tty_nr = 1031
-tpgid = 1037
+tpgid = 969
 flags = 4194560
-minflt = 172977
-cminflt = 3317
-majflt = 46
+minflt = 56066
+cminflt = 3320
+majflt = 65
 cmajflt = 4
-utime = 58549
-stime = 28662
-cutime = 3
-cstime = 1
+utime = 6972
+stime = 4200
+cutime = 6
+cstime = 0
 priority = 20
 nice = 0
 num_threads = 2
 itrealvalue = 0
-starttime = 2936
-vsize = 382865408
-rss = 14650
+starttime = 2926
+vsize = 409796608
+rss = 15735
 rlim = 18446744073709551615
 startcode = 1
 endcode = 1
@@ -263,33 +494,33 @@ wchan = 0
 nswap = 0
 cnswap = 0
 exit_signal = 17
-processor = 1
+processor = 2
 rt_priority = 0
 policy = 0
-delayacct_blkio_ticks = 445
+delayacct_blkio_ticks = 229
 
 
 
 
-                    ** memory of the current process, PID  = 1037
+                    ** memory of the current process, PID  = 969
 
 
 
 
-pid = 1037
-size = 93473
-resident = 14650
-share = 6920
+pid = 969
+size = 100048
+resident = 15735
+share = 9748
 text = 576
 lib = 0
-data = 10055
+data = 8284
 dt = 0
-2336 
+2155 
 
 
 
 
-**********DATA  per process*****************  PID = 2336
+**********DATA  per process*****************  PID = 2155
 
 
 
@@ -298,39 +529,39 @@ dt = 0
 
 
 
-	         **Cpu of the current process, PID =   2336
+	         **Cpu of the current process, PID =   2155
 
 
 
 
-pid = 2336
+pid = 2155
 comm = (compiz)
 state = S
-ppid = 1936
-pgrp = 2336
-session = 2336
+ppid = 1720
+pgrp = 2155
+session = 2155
 tty_nr = 0
 tpgid = -1
 flags = 4194304
-minflt = 154959
-cminflt = 1557
-majflt = 132
-cmajflt = 1
-utime = 65571
-stime = 19097
-cutime = 141
-cstime = 80
+minflt = 27645
+cminflt = 122
+majflt = 64
+cmajflt = 0
+utime = 8145
+stime = 1692
+cutime = 0
+cstime = 0
 priority = 20
 nice = 0
 num_threads = 8
 itrealvalue = 0
-starttime = 6168
-vsize = 1539301376
-rss = 63450
+starttime = 5610
+vsize = 1262567424
+rss = 26031
 rlim = 18446744073709551615
 startcode = 4194304
 endcode = 4204954
-startstack = 140732484061008
+startstack = 140726279011760
 kstkesp = 0
 kstkeip = 0
 signal = 0
@@ -341,33 +572,33 @@ wchan = 0
 nswap = 0
 cnswap = 0
 exit_signal = 17
-processor = 0
+processor = 1
 rt_priority = 0
 policy = 0
-delayacct_blkio_ticks = 1149
+delayacct_blkio_ticks = 1152
 
 
 
 
-                    ** memory of the current process, PID  = 2336
+                    ** memory of the current process, PID  = 2155
 
 
 
 
-pid = 2336
-size = 375806
-resident = 63450
-share = 13948
+pid = 2155
+size = 308244
+resident = 26031
+share = 15779
 text = 3
 lib = 0
-data = 80675
+data = 33052
 dt = 0
-22816 
+2394 
 
 
 
 
-**********DATA  per process*****************  PID = 22816
+**********DATA  per process*****************  PID = 2394
 
 
 
@@ -376,39 +607,39 @@ dt = 0
 
 
 
-	         **Cpu of the current process, PID =   22816
+	         **Cpu of the current process, PID =   2394
 
 
 
 
-pid = 22816
+pid = 2394
 comm = (chrome)
 state = S
-ppid = 22782
-pgrp = 2336
-session = 2336
+ppid = 2324
+pgrp = 2155
+session = 2155
 tty_nr = 0
 tpgid = -1
 flags = 4194304
-minflt = 54479
+minflt = 274155
 cminflt = 0
-majflt = 0
+majflt = 51
 cmajflt = 0
-utime = 8788
-stime = 4337
+utime = 6578
+stime = 2107
 cutime = 0
 cstime = 0
 priority = 20
 nice = 0
 num_threads = 7
 itrealvalue = 0
-starttime = 2638766
-vsize = 569171968
-rss = 28984
+starttime = 8493
+vsize = 643223552
+rss = 44319
 rlim = 18446744073709551615
-startcode = 94098399797248
-endcode = 94098536860496
-startstack = 140722689952288
+startcode = 94223224614912
+endcode = 94223378485600
+startstack = 140733515765760
 kstkesp = 0
 kstkeip = 0
 signal = 0
@@ -419,111 +650,33 @@ wchan = 0
 nswap = 0
 cnswap = 0
 exit_signal = 17
-processor = 0
-rt_priority = 0
-policy = 0
-delayacct_blkio_ticks = 0
-
-
-
-
-                    ** memory of the current process, PID  = 22816
-
-
-
-
-pid = 22816
-size = 138958
-resident = 28984
-share = 18123
-text = 33463
-lib = 0
-data = 24984
-dt = 0
-24041 
-
-
-
-
-**********DATA  per process*****************  PID = 24041
-
-
-
-
-
-
-
-
-	         **Cpu of the current process, PID =   24041
-
-
-
-
-pid = 24041
-comm = (chrome)
-state = S
-ppid = 22795
-pgrp = 2336
-session = 2336
-tty_nr = 0
-tpgid = -1
-flags = 1077936192
-minflt = 688375
-cminflt = 0
-majflt = 0
-cmajflt = 0
-utime = 6765
-stime = 536
-cutime = 0
-cstime = 0
-priority = 20
-nice = 0
-num_threads = 11
-itrealvalue = 0
-starttime = 2843682
-vsize = 1011568640
-rss = 71441
-rlim = 18446744073709551615
-startcode = 94054803038208
-endcode = 94054940101456
-startstack = 140727050946192
-kstkesp = 0
-kstkeip = 0
-signal = 0
-blocked = 0
-sigignore = 4098
-sigcatch = 1073827581
-wchan = 0
-nswap = 0
-cnswap = 0
-exit_signal = 17
 processor = 2
 rt_priority = 0
 policy = 0
-delayacct_blkio_ticks = 0
+delayacct_blkio_ticks = 334
 
 
 
 
-                    ** memory of the current process, PID  = 24041
+                    ** memory of the current process, PID  = 2394
 
 
 
 
-pid = 24041
-size = 246965
-resident = 71441
-share = 20420
-text = 33463
+pid = 2394
+size = 157037
+resident = 44319
+share = 31660
+text = 37567
 lib = 0
-data = 97478
+data = 23814
 dt = 0
-26099 
+2397 
 
 
 
 
-**********DATA  per process*****************  PID = 26099
+**********DATA  per process*****************  PID = 2397
 
 
 
@@ -532,46 +685,124 @@ dt = 0
 
 
 
-	         **Cpu of the current process, PID =   26099
+	         **Cpu of the current process, PID =   2397
 
 
 
 
-pid = 26099
+pid = 2397
 comm = (chrome)
 state = S
-ppid = 22795
-pgrp = 2336
-session = 2336
+ppid = 2324
+pgrp = 2155
+session = 2155
 tty_nr = 0
 tpgid = -1
-flags = 1077936192
-minflt = 41812
+flags = 1077936128
+minflt = 84133
 cminflt = 0
-majflt = 0
+majflt = 44
 cmajflt = 0
-utime = 626
-stime = 79
+utime = 3069
+stime = 942
 cutime = 0
 cstime = 0
 priority = 20
 nice = 0
 num_threads = 10
 itrealvalue = 0
-starttime = 3155138
-vsize = 766115840
-rss = 30722
+starttime = 8508
+vsize = 596881408
+rss = 25782
 rlim = 18446744073709551615
-startcode = 94054803038208
-endcode = 94054940101456
-startstack = 140727050946192
+startcode = 94665067331584
+endcode = 94665221202272
+startstack = 140729726958256
 kstkesp = 0
 kstkeip = 0
 signal = 0
 blocked = 0
 sigignore = 4098
-sigcatch = 1073827581
+sigcatch = 1272
 wchan = 0
+nswap = 0
+cnswap = 0
+exit_signal = 17
+processor = 1
+rt_priority = 0
+policy = 0
+delayacct_blkio_ticks = 66
+
+
+
+
+                    ** memory of the current process, PID  = 2397
+
+
+
+
+pid = 2397
+size = 145723
+resident = 25782
+share = 16840
+text = 37567
+lib = 0
+data = 32964
+dt = 0
+6660 
+
+
+
+
+**********DATA  per process*****************  PID = 6660
+
+
+
+
+
+
+
+
+	         **Cpu of the current process, PID =   6660
+
+
+
+
+pid = 6660
+comm = (bash)
+state = S
+ppid = 6653
+pgrp = 6660
+session = 6660
+tty_nr = 34818
+tpgid = 6672
+flags = 4194304
+minflt = 827
+cminflt = 869
+majflt = 0
+cmajflt = 0
+utime = 2
+stime = 1
+cutime = 0
+cstime = 0
+priority = 20
+nice = 0
+num_threads = 1
+itrealvalue = 0
+starttime = 311325
+vsize = 30576640
+rss = 1325
+rlim = 18446744073709551615
+startcode = 4194304
+endcode = 5192964
+startstack = 140720658087312
+kstkesp = 0
+kstkeip = 0
+signal = 0
+blocked = 65536
+sigignore = 3670020
+sigcatch = 1266777851
+wchan = 1
 nswap = 0
 cnswap = 0
 exit_signal = 17
@@ -583,122 +814,16 @@ delayacct_blkio_ticks = 0
 
 
 
-                    ** memory of the current process, PID  = 26099
+                    ** memory of the current process, PID  = 6660
 
 
 
 
-pid = 26099
-size = 187040
-resident = 30722
-share = 18803
-text = 33463
+pid = 6660
+size = 7465
+resident = 1325
+share = 837
+text = 244
 lib = 0
-data = 39627
+data = 510
 dt = 0
-24360 
-
-
-
-
-**********DATA  per process*****************  PID = 24360
-
-
-
-
-
-
-
-
-	         **Cpu of the current process, PID =   24360
-
-
-
-
-pid = 24360
-comm = (chrome)
-state = S
-ppid = 22795
-pgrp = 2336
-session = 2336
-tty_nr = 0
-tpgid = -1
-flags = 1077936192
-minflt = 225363
-cminflt = 0
-majflt = 0
-cmajflt = 0
-utime = 4225
-stime = 486
-cutime = 0
-cstime = 0
-priority = 20
-nice = 0
-num_threads = 10
-itrealvalue = 0
-starttime = 2874609
-vsize = 820154368
-rss = 40657
-rlim = 18446744073709551615
-startcode = 94054803038208
-endcode = 94054940101456
-startstack = 140727050946192
-kstkesp = 0
-kstkeip = 0
-signal = 0
-blocked = 0
-sigignore = 4098
-sigcatch = 1073827581
-wchan = 0
-nswap = 0
-cnswap = 0
-exit_signal = 17
-processor = 1
-rt_priority = 0
-policy = 0
-delayacct_blkio_ticks = 0
-
-
-
-
-                    ** memory of the current process, PID  = 24360
-
-
-
-
-pid = 24360
-size = 200233
-resident = 40657
-share = 19612
-text = 33463
-lib = 0
-data = 52363
-dt = 0
-23164 
-
-
-
-
-**********DATA  per process*****************  PID = 23164
-
-
-
-
-
-
-
-
-	         **Cpu of the current process, PID =   23164
-
-
-
-
-pid = 23164
-comm = (chrome)
-state = S
-ppid = 22795
-pgrp = 2336
-session = 2336
-tty_nr = 0
-tpgid = -1
-flags = 107
